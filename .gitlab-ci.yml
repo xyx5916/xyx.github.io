@@ -1,0 +1,22 @@
+image: node:18
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - npm install -g hexo-cli
+    - npm install
+    - hexo generate
+    # 确保 public 目录是根目录
+    - rm -rf public || true
+    - mv public_temp public 2>/dev/null || true
+  artifacts:
+    paths:
+      - public
+  # 必须和你注册的 Runner 标签一致（你的是 website）
+  tags:
+    - website
+  only:
+    - main

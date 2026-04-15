@@ -1,0 +1,6 @@
+[submodule "themes/hexo-theme-sea"]  # 子模块名称可以自定义，也可以和路径一致
+    path = themes/hexo-theme-sea     # 实际子模块的本地路径
+    url = https://github.com/xyx5916/xyx.github.io.git  # 远程仓库地址
+[submodule "xyx.github.io"]
+    path = xyx.github.io
+    url = https://github.com/xyx5916/xyx.github.io.git
